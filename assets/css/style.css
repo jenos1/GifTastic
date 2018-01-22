@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  background: url(../images/green_cup.png);
+}
+
+.container {
+	position: relative;
+	text-align: center;
+	color: white;
+}
+
+.title {
+	position: absolute;
+  top: 55px;
+  left: 28px;
+}
+
+.container-personlist {
+	text-align: left;
+	margin-left: 20px;
+}
+
+#person-input {
+	height: 30px;
+	font: 15px arial, sans-serif;
+}
+
+#person-form {
+	margin-top: 25px;
+	text-align: left;
+	margin-left: 40px;
+}
+
+hr {
+padding-top: 5px;
+color: #c5f230;
+background-color: black;
+width: 85%;
+}
+
+img {
+	width: 100%;
+}
+
+.submit {
+	margin-left: 10px;
+	background: #0066A2;
+	color: white;
+	border-style: outset;
+	border-color: #0066A2;
+	height: 30px;
+	width: 100px;
+	font: bold 15px arial, sans-serif;
+	text-shadow: none;
+}
+
+
+label {
+	font: 18px bold arial, sans-serif;
+	padding-right: 8px;
+}
+
+button.musician {
+	margin: 10px 10px 10px 20px;
+	padding-right: 10px;
+	height: 35px;
+	font: bold 15px arial, sans-serif;
+	background: #0066A2;
+	color: white;
+	border-style: outset;
+	border-color: #0066A2;
+
+}
+
+
+
+
