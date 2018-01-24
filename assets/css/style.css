@@ -87,6 +87,18 @@ img.person-image {
 	text-shadow: none;
 }
 
+.reset {
+	margin-left: 10px;
+	background: #0066A2;
+	color: white;
+	border-style: outset;
+	border-color: #0066A2;
+	height: 30px;
+	width: 100px;
+	font: bold 15px arial, sans-serif;
+	text-shadow: none;
+}
+
 label {
 	font: 18px bold arial, sans-serif;
 	padding-right: 5px;
