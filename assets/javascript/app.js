@@ -8,8 +8,6 @@ $(document).ready(function() {
 	"Greg Allman"
 	];
 
-
-
 	function addButtons() {
 		// Delete existing buttons prior to adding new to avoid duplicates.
 		$("#person-view").empty();
@@ -29,6 +27,7 @@ $(document).ready(function() {
 			$("#person-view").append(addButton);
 		});
  }
+
 	$("#person-input").focus();
  	$("#add-person").on("click", function(event) {
 	 	// preventDefault prevents form from submitting itself. Allows use of <enter>.
@@ -60,7 +59,7 @@ $(document).ready(function() {
  		// Use single quotes around name and encodeURiComponent to sanitize it.
  		// var quoted = "'" + term + "'";` = 'quoted term'
  		$.get("http://api.giphy.com/v1/gifs/search?&api_key=QgyyNJu0tpkFEUcHKrttfUbFSFIdhoVU&q=" + encoded + "&limit=10&rating=g&lang=en")
- 		.then(function(response) {
+ 		.done(function(response) {
  			//Display API object in console.
  			console.log(response);
  			var results = response.data;
@@ -70,13 +69,13 @@ $(document).ready(function() {
  				var rating = results[i].rating.toUpperCase();
  				var p = $("<p>").html("Rating:  " + rating );
  				var personImage = $("<img class='person-image'>");
- 				// Object notation for image attributes
+
+ 				// Object for image attributes
  				personImage.attr({
  					src: results[i].images.fixed_height_still.url,
  					"data-still": results[i].images.fixed_height_still.url,
  					"data-animate": results[i].images.fixed_height.url,
  					"data-state": "still",
-
  				});
 
  				imagesDiv.append(p);
@@ -87,6 +86,19 @@ $(document).ready(function() {
 
  		});
 
- 	});
+ 		// Clicking on image changes state from initial "still" to "animated". One more click changes back to "still".
+ 		 $(".person-image").on("click", function(event) {
+            var state = $(this).attr("data-state");
+            console.log($(this).attr("data-state"));
+            if (state == "still") {
+                $(this).attr("src", $(this).data("animate"));
+                $(this).attr("data-state", "animate");
+            } else {
+                $(this).attr("src", $(this).data("still"));
+                $(this).attr("data-state", "still");
+            }
+        })
+    })
 
-})
+ 	});
+		

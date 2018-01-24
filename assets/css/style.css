@@ -24,6 +24,12 @@ body {
 	margin-left: 60px;
 }
 
+.container-images {
+	width: 85%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
 #person-input {
 	height: 30px;
 	font: 15px arial, sans-serif;
