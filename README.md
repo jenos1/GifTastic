@@ -5,7 +5,7 @@ This is an application to search for Musicians and bring back related images bot
 
 * The user is provided a sample set of Musicians to start, with the ability to add user-selected names. 
 * Clicking on the Musician's button searches and returns ten images.
-* Clicking on any image changes the image to be dynamic as in a movie.
+* Clicking on any image changes the static image to be dynamic as in a movie.
 * Clicking on the dynamic image changes it back to a static image.
 
 ## Requirements
