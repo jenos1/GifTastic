@@ -58,7 +58,7 @@ $(document).ready(function() {
  		// AJAX search call with data-name value of button clicked.
  		// Use single quotes around name and encodeURiComponent to sanitize it.
  		// var quoted = "'" + term + "'";` = 'quoted term'
- 		$.get("http://api.giphy.com/v1/gifs/search?&api_key=QgyyNJu0tpkFEUcHKrttfUbFSFIdhoVU&q=" + encoded + "&limit=10&rating=g&lang=en")
+ 		$.get("https://api.giphy.com/v1/gifs/search?&api_key=QgyyNJu0tpkFEUcHKrttfUbFSFIdhoVU&q=" + encoded + "&limit=10&rating=g&lang=en")
  		.then(function(response) {
  			//Display API object in console.
  			console.log(response);
